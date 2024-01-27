@@ -5,15 +5,19 @@ interface MenuProps {
   menuButton: React.JSX.Element;
   name?: string;
   items: Array<string>;
+  isMobile?: boolean;
 }
 
-const ProfileMenu = ({ menuButton, items, name }: MenuProps) => {
+const ProfileMenu = ({ menuButton, items, name, isMobile }: MenuProps) => {
   return (
     <div className="relative block">
       <Menu>
         <Menu.Button
-          className="rounded-full border border-[#DADDD] dark:border-[#555] bg-none hover:bg-[#eee] dark:hover:bg-[#555] p-[6px]"
+          className="rounded-full border border-[#DADDD] dark:border-[#555] bg-none hover:bg-[#eee] dark:hover:bg-[#555]"
           tabIndex={-1}
+          style={{
+            padding: isMobile ? "6px" : "11px",
+          }}
         >
           {menuButton}
         </Menu.Button>

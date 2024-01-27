@@ -32,6 +32,7 @@ const User = () => {
       </div>
       <div className="flex md:hidden">
         <ProfileMenu
+          isMobile
           name="Justin Bergson"
           menuButton={<img src={userImg} className="max-h-[34px]" alt="user" />}
           items={[
