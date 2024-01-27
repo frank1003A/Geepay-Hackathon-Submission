@@ -2,7 +2,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import { BiDownload, BiPrinter } from "react-icons/bi";
 import { Order } from "../types";
-import IconButton from "./IconButton";
+import IconButton from "./Buttons/IconButton";
 import { Logo } from "./Icons";
 
 interface ModalProps extends Order {}
