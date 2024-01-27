@@ -44,7 +44,7 @@ const Table = ({ headers, data }: TableProps) => {
                 {row.status}
               </td>
 
-              <td>
+              <td className="sticky right-0 bg-white">
                 <CustomModal {...row} />
               </td>
             </>
