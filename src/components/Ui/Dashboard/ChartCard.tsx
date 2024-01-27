@@ -1,5 +1,4 @@
 import BarChart from "../../BarChart";
-import Button from "../../Button";
 import Card from "../../Card";
 import { ChevronDownIcons } from "../../Icons";
 import CustomMenu from "../../Menu";
@@ -13,10 +12,10 @@ const ChartCard = () => {
           <span>short by: </span>
           <CustomMenu
             menuButton={
-              <Button>
+              <>
                 Weekly
                 <ChevronDownIcons />
-              </Button>
+              </>
             }
           />
         </Sectionheader>

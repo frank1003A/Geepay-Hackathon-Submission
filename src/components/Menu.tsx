@@ -8,7 +8,12 @@ const CustomMenu = ({ menuButton }: MenuProps) => {
   return (
     <div className="relative">
       <Menu>
-        <Menu.Button tabIndex={-1}>{menuButton}</Menu.Button>
+        <Menu.Button
+          tabIndex={-1}
+          className="flex items-center justify-center hover:bg-[#eee] dark:hover:bg-[#555] py-[6px] px-[12px] gap-[10px] rounded-[20px] border border-solid border-[#E1DFDF] dark:border-[#555]"
+        >
+          {menuButton}
+        </Menu.Button>
         <Menu.Items className="absolute border border-[#EDF2F7] p-2 right-0 mt-2 m-0 z-[9999] min-w-max list-none overflow-hidden rounded-lg bg-white bg-clip-padding text-left text-base border-border  dark:border-[#555] shadow-lg dark:bg-carddark [&[data-te-dropdown-show]]:block">
           <Menu.Item>
             {({ active }) => (

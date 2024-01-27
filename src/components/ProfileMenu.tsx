@@ -1,5 +1,5 @@
 import { Menu } from "@headlessui/react";
-import React from "react";
+import React, { Fragment } from "react";
 
 interface MenuProps {
   menuButton: React.JSX.Element;
@@ -11,7 +11,12 @@ const ProfileMenu = ({ menuButton, items, name }: MenuProps) => {
   return (
     <div className="relative block">
       <Menu>
-        <Menu.Button tabIndex={-1}>{menuButton}</Menu.Button>
+        <Menu.Button
+          className="rounded-full border border-[#DADDD] dark:border-[#555] bg-none hover:bg-[#eee] dark:hover:bg-[#555] p-[11px]"
+          tabIndex={-1}
+        >
+          {menuButton}
+        </Menu.Button>
         <Menu.Items className="absolute border border-[#EDF2F7] p-2 right-0 mt-2 m-0 z-[800] min-w-max list-none overflow-hidden rounded-lg bg-white bg-clip-padding text-left text-base border-border  dark:border-[#555] shadow-lg dark:bg-carddark [&[data-te-dropdown-show]]:block">
           <div className="flex gap-[10px] items-center justify-between border-[#EDF2F7] p-2 bg-[#EEE] dark:bg-[#555] rounded-md">
             <div className="text-white text-[14px] bg-primary w-[25px] h-[25px] gap-[14px] rounded-md flex items-center justify-center p-[11] bg-primary">
@@ -19,9 +24,9 @@ const ProfileMenu = ({ menuButton, items, name }: MenuProps) => {
             </div>
             {name}
           </div>
-          {items.map((item, index) => {
+          {items.map((item) => {
             return (
-              <Menu.Item key={item + index} as={"li"}>
+              <Menu.Item key={item} as={Fragment}>
                 {({ active }) => (
                   <a
                     className={`${

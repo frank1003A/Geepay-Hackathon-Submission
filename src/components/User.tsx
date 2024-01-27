@@ -1,5 +1,4 @@
 import userImg from "../assets/userimage.png";
-import IconButton from "./IconButton";
 import { ChevronDownIcons } from "./Icons";
 import ProfileMenu from "./ProfileMenu";
 
@@ -20,11 +19,7 @@ const User = () => {
           </span>
         </div>
         <ProfileMenu
-          menuButton={
-            <IconButton aria-describedby="user">
-              <ChevronDownIcons />
-            </IconButton>
-          }
+          menuButton={<ChevronDownIcons />}
           name="Justin Bergson"
           items={[
             "Help Center",
@@ -38,14 +33,7 @@ const User = () => {
       <div className="flex md:hidden">
         <ProfileMenu
           name="Justin Bergson"
-          menuButton={
-            <button
-              className="flex items-center p-1 justify-center rounded-[28px] border border-[#DADDD] 
-          dark:border-[#555]"
-            >
-              <img src={userImg} className="max-h-[34px]" alt="user" />
-            </button>
-          }
+          menuButton={<img src={userImg} className="max-h-[34px]" alt="user" />}
           items={[
             "Help Center",
             "Change log",
