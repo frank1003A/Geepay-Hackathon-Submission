@@ -1,6 +1,6 @@
 import userImg from "../assets/userimage.png";
 import { ChevronDownIcons } from "./Icons";
-import ProfileMenu from "./ProfileMenu";
+import ProfileMenu from "./Menus/ProfileMenu";
 
 const User = () => {
   return (
