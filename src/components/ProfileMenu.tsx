@@ -12,7 +12,7 @@ const ProfileMenu = ({ menuButton, items, name }: MenuProps) => {
     <div className="relative block">
       <Menu>
         <Menu.Button
-          className="rounded-full border border-[#DADDD] dark:border-[#555] bg-none hover:bg-[#eee] dark:hover:bg-[#555] p-[11px]"
+          className="rounded-full border border-[#DADDD] dark:border-[#555] bg-none hover:bg-[#eee] dark:hover:bg-[#555] p-[6px]"
           tabIndex={-1}
         >
           {menuButton}
