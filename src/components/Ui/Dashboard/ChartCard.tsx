@@ -1,7 +1,7 @@
-import BarChart from "../../BarChart";
-import Card from "../../Card";
+import Card from "../../Cards/Card";
 import { ChevronDownIcons } from "../../Icons";
-import CustomMenu from "../../Menu";
+import CustomMenu from "../../Menus/Menu";
+import BarChart from "../../Rechart/BarChart";
 import Sectionheader from "./Sectionheader";
 
 const ChartCard = () => {

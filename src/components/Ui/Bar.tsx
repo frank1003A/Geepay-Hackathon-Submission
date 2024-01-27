@@ -1,6 +1,6 @@
 import Date from "../Date";
 import { BellIcon, Logo } from "../Icons";
-import NotifyMenu from "../NotifyMenu";
+import NotifyMenu from "../Menus/NotifyMenu";
 import Search from "../Search";
 import User from "../User";
 

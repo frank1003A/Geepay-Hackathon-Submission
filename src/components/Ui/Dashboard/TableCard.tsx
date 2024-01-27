@@ -1,5 +1,5 @@
 import { orderTable } from "../../../config/site";
-import Card from "../../Card";
+import Card from "../../Cards/Card";
 import Table from "../../Table";
 import Sectionheader from "./Sectionheader";
 
