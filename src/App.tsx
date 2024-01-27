@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Date from "./components/Date";
+import { Logo } from "./components/Icons";
 import Search from "./components/Search";
 import ChartCard from "./components/Ui/Dashboard/ChartCard";
 import PlatformsCard from "./components/Ui/Dashboard/PlatformsCard";
@@ -20,8 +21,10 @@ function App() {
   return (
     <>
       {loading ? (
-        <div className="flex items-center justify-center fixed inset-0 bg-white">
-          <p>Loading...</p>
+        <div className="flex items-center justify-center fixed inset-0 bg-white dark:bg-darkbg">
+          <div className="animate-spin">
+            <Logo />
+          </div>
         </div>
       ) : (
         <Layout>
