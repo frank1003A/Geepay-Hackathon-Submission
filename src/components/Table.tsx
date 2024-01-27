@@ -10,12 +10,15 @@ const Table = ({ headers, data }: TableProps) => {
     <table className="min-w-full text-left text-sm font-light max-h-[440px]">
       <thead className="border-b font-medium dark:border-neutral-500 ">
         <tr>
-          {headers.map((head) => {
+          {headers.map((head, index) => {
             return (
               <th
                 key={head}
                 scope="col"
-                className="px-0 py-4 capitalize text-[#9CA4AB] text-[16px] font-[500] sticky top-0"
+                className={`px-0 py-4 capitalize text-[#9CA4AB] text-[16px] font-[500] 
+                ${
+                  index === 4 ? "sticky right-0" : "relative"
+                } bg-white dark:bg-darkbg`}
               >
                 {head}
               </th>
@@ -44,7 +47,7 @@ const Table = ({ headers, data }: TableProps) => {
                 {row.status}
               </td>
 
-              <td className="sticky right-0 bg-white">
+              <td className="sticky right-0 bg-white dark:bg-darkbg">
                 <CustomModal {...row} />
               </td>
             </>

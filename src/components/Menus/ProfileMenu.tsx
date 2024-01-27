@@ -16,7 +16,7 @@ const ProfileMenu = ({ menuButton, items, name, isMobile }: MenuProps) => {
           className="rounded-full border border-[#DADDD] dark:border-[#555] bg-none hover:bg-[#eee] dark:hover:bg-[#555]"
           tabIndex={-1}
           style={{
-            padding: isMobile ? "6px" : "11px",
+            padding: isMobile ? "2px" : "11px",
           }}
         >
           {menuButton}

@@ -34,7 +34,7 @@ const User = () => {
         <ProfileMenu
           isMobile
           name="Justin Bergson"
-          menuButton={<img src={userImg} className="max-h-[34px]" alt="user" />}
+          menuButton={<img src={userImg} className="max-h-[45px]" alt="user" />}
           items={[
             "Help Center",
             "Change log",
