@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import ScrollTop from "./components/Buttons/ScrollTop";
 import Date from "./components/Date";
 import { Logo } from "./components/Icons";
 import Search from "./components/Search";
@@ -21,7 +22,7 @@ function App() {
   return (
     <>
       {loading ? (
-        <div className="flex items-center justify-center fixed inset-0 bg-white dark:bg-darkbg">
+        <div className="flex items-center justify-center fixed inset-0 dark:bg-darkbg bg-white">
           <div className="animate-spin">
             <Logo />
           </div>
@@ -40,6 +41,7 @@ function App() {
             <TableCard />
             <PlatformsCard />
           </PrimaryGrid>
+          <ScrollTop />
         </Layout>
       )}
     </>

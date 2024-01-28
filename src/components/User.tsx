@@ -11,37 +11,25 @@ const User = () => {
       >
         <img src={userImg} alt="user" />
         <div className="flex flex-col">
-          <span id="user" className="text-primaryfont text-[16px]">
+          <span id="user" className="text-primaryfont text-[16px] end">
             Justin Bergson
           </span>
-          <span id="user-email" className="text-secondaryfont text-[14px]">
+          <span id="user-email" className="text-secondaryfont text-[14px] end">
             Justin@gmail.com
           </span>
         </div>
         <ProfileMenu
-          menuButton={<ChevronDownIcons />}
+          buttonContent={<ChevronDownIcons />}
           name="Justin Bergson"
-          items={[
-            "Help Center",
-            "Change log",
-            "Community Forum",
-            "Manage Account",
-            "Logout",
-          ]}
         />
       </div>
       <div className="flex md:hidden">
         <ProfileMenu
           isMobile
           name="Justin Bergson"
-          menuButton={<img src={userImg} className="max-h-[45px]" alt="user" />}
-          items={[
-            "Help Center",
-            "Change log",
-            "Community Forum",
-            "Manage Account",
-            "Logout",
-          ]}
+          buttonContent={
+            <img src={userImg} className="w-[38px h-[38px]" alt="user" />
+          }
         />
       </div>
     </>
