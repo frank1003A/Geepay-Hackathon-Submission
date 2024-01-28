@@ -12,6 +12,7 @@ const Bar = ({ toggleSlidebar }: BarProps) => {
     <header className="flex w-full border-b dark:border-b-[#555] p-[18px] sticky top-0 backdrop-blur-lg max-h-[80px] z-[900]">
       <div className="flex items-center justify-center w-full dark:text-white">
         <button
+          id="logo_hamburger"
           className="bg-none rounded-full md:hidden"
           onClick={toggleSlidebar}
         >

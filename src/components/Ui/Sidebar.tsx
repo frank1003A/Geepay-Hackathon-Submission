@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { BiX } from "react-icons/bi";
 import { siteConfig } from "../../config/site";
 import { Logo } from "../Icons";
 import Switcher from "../ThemeSwitcher";
@@ -14,6 +15,9 @@ const Sidebar = ({ slidebar, toggleSlidebar }: SidebarProps) => {
   useEffect(() => {
     const sidebar = sbRef.current as HTMLElement;
     const menus = sidebar.querySelectorAll("button, a");
+    const trigger = document.getElementById(
+      "logo_hamburger"
+    ) as HTMLButtonElement;
 
     const handleKeyDown = (event: KeyboardEvent) => {
       const activeElement = document.activeElement;
@@ -40,6 +44,7 @@ const Sidebar = ({ slidebar, toggleSlidebar }: SidebarProps) => {
           break;
         case "Escape":
           event.preventDefault();
+          trigger ? trigger.focus() : null;
           toggleSlidebar();
           break;
         default:
@@ -64,8 +69,17 @@ const Sidebar = ({ slidebar, toggleSlidebar }: SidebarProps) => {
         className={`fixed inset-0 z-[1000] ${
           slidebar === false ? "translate-x-[-100%]" : "translate-x-[0%]"
         } transition-[.5s] md:transform-none bg-[#F7F8FA] dark:bg-darkbg md:block w-[80px] px-0 border-r border-e-border dark:border-e-[#555] h-full`}
+        aria-hidden={slidebar ? "true" : "false"}
       >
-        <div className="flex flex-col justify-start align-center py-[20px] h-full">
+        <div className="relative flex flex-col justify-start align-center py-[20px] h-full">
+          {slidebar ? (
+            <button
+              className="md:hidden absolute right-[-60px] flex items-center justify-center text-white bg-primary text-[20px] p-3 rounded-md"
+              onClick={toggleSlidebar}
+            >
+              <BiX />
+            </button>
+          ) : null}
           <div className="flex justify-center align-center">
             <a href="/">
               <Logo />
