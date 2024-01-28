@@ -14,8 +14,19 @@ export default {
       secondaryfont: "#787486",
       carddark: "#292929",
     }),
-    extend: {},
+    extend: {
+      keyframes: {
+        progressbar: {
+          "0% ": { width: "0" },
+          "100%": { width: "100%" },
+        },
+      },
+    },
   },
   darkMode: "class",
   plugins: [],
+  safelist: [
+    "animate-[fade-in_1s_ease-in-out]",
+    "animate-[fade-in-down_1s_ease-in-out]",
+  ],
 };
