@@ -10,8 +10,11 @@ const NotifyMenu = ({ menuButton, items }: MenuProps) => {
   return (
     <div className="relative">
       <Menu>
-        <Menu.Button className="rounded-full border border-[#DADDD] dark:border-[#555] bg-none hover:bg-[#eee] dark:hover:bg-[#555] p-[11px]">
+        <Menu.Button className="relative rounded-full border border-[#DADDD] dark:border-[#555] bg-none hover:bg-[#eee] dark:hover:bg-[#555] p-[11px]">
           {menuButton}
+          <div className="absolute right-0 top-[-8px] p-[2px] bg-red-500 text-white text-[10px] rounded-full w-5 h-5 flex items-center justify-center">
+            2
+          </div>
         </Menu.Button>
         <Menu.Items className="absolute border border-[#EDF2F7] p-2 right-0 mt-2 m-0 z-[800] min-w-max list-none overflow-hidden rounded-lg bg-white bg-clip-padding text-left text-base border-border  dark:border-[#555] shadow-lg dark:bg-carddark [&[data-te-dropdown-show]]:block">
           <div className="flex items-center gap-[20px] justify-between border-[#EDF2F7] p-2 bg-[#EEE] dark:bg-[#555] rounded-md">

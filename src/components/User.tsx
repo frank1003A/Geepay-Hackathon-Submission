@@ -19,7 +19,11 @@ const User = () => {
           </span>
         </div>
         <ProfileMenu
-          buttonContent={<ChevronDownIcons />}
+          buttonContent={
+            <span className="group-hover:rotate-180">
+              <ChevronDownIcons />
+            </span>
+          }
           name="Justin Bergson"
         />
       </div>

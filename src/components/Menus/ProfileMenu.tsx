@@ -11,7 +11,7 @@ const ProfileMenu = ({ buttonContent, name, isMobile }: MenuProps) => {
   return (
     <Menu as={"div"} className={"relative block"}>
       <Menu.Button
-        className="rounded-full border border-[#DADDD] dark:border-[#555] bg-none hover:bg-[#eee] dark:hover:bg-[#555]"
+        className="group rounded-full border border-[#DADDD] dark:border-[#555] bg-none hover:bg-[#eee] dark:hover:bg-[#555]"
         style={{
           padding: isMobile ? "2px" : "11px",
         }}
