@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import ScrollTop from "./components/Buttons/ScrollTop";
-import Date from "./components/Date";
+import DateComponent from "./components/Date";
 import { Logo } from "./components/Icons";
 import Search from "./components/Search";
 import ChartCard from "./components/Ui/Dashboard/ChartCard";
@@ -29,8 +29,8 @@ function App() {
         </div>
       ) : (
         <Layout>
-          <div className="py-2 w-full md:hidden">
-            <Date />
+          <div className="py-2 px-4 w-full md:hidden">
+            <DateComponent />
           </div>
           <div className="flex items-center justify-start py-[0px] md:py-[20px] px-4 lg:hidden">
             <Search />
