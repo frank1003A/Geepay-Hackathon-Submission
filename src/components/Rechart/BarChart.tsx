@@ -15,57 +15,6 @@ import {
   ValueType,
 } from "recharts/types/component/DefaultTooltipContent";
 
-const data = [
-  {
-    name: "Jan",
-    pv: 8.0,
-  },
-  {
-    name: "Feb",
-    pv: 18.0,
-  },
-  {
-    name: "Mar",
-    pv: 6.0,
-  },
-  {
-    name: "Apr",
-    pv: 28.0,
-  },
-  {
-    name: "May",
-    pv: 9.0,
-  },
-  {
-    name: "Jun",
-    pv: 45.0,
-  },
-  {
-    name: "Jul",
-    pv: 9.0,
-  },
-  {
-    name: "Aug",
-    pv: 20.0,
-  },
-  {
-    name: "Sep",
-    pv: 32.0,
-  },
-  {
-    name: "Oct",
-    pv: 7.0,
-  },
-  {
-    name: "Nov",
-    pv: 29.0,
-  },
-  {
-    name: "Dec",
-    pv: 26.0,
-  },
-];
-
 const CustomTooltip = ({
   active,
   payload,
@@ -79,7 +28,7 @@ const CustomTooltip = ({
         }}
       >
         <div className="bg-black text-white text-xs rounded py-[5px] px-4 right-0 bottom-full rounded-md">
-          {`$ ${payload ? payload?.[0].value : 0}.000`}
+          {`$ ${payload ? Number(payload?.[0].value).toFixed(0) : 0}.000`}
           <svg
             className="absolute text-black h-2 w-full left-0 top-full"
             x="0px"
@@ -97,7 +46,7 @@ const CustomTooltip = ({
   return null;
 };
 
-const BarChart = () => {
+const BarChart = ({ data }: { data: { name: string; pv: number }[] }) => {
   return (
     <ResponsiveContainer width="100%" height="100%">
       <RechartBarChart
@@ -111,6 +60,9 @@ const BarChart = () => {
           bottom: 5,
         }}
         barSize={20}
+        style={{
+          zIndex: "0 !important",
+        }}
       >
         <defs>
           <linearGradient id="colorUv" x1="0%" y1="0%" x2="0%" y2="100%">

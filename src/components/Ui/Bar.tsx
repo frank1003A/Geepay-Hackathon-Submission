@@ -1,4 +1,4 @@
-import Date from "../Date";
+import DateComponent from "../Date";
 import { BellIcon, Logo } from "../Icons";
 import NotifyMenu from "../Menus/NotifyMenu";
 import Search from "../Search";
@@ -26,7 +26,7 @@ const Bar = ({ toggleSlidebar }: BarProps) => {
             <Search />
           </div>
           <div className="hidden md:flex">
-            <Date />
+            <DateComponent />
           </div>
           <NotifyMenu menuButton={<BellIcon />} />
           <User />

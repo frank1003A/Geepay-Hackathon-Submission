@@ -71,7 +71,7 @@ const Sidebar = ({ slidebar, toggleSlidebar }: SidebarProps) => {
         } transition-[.5s] md:transform-none bg-[#F7F8FA] dark:bg-darkbg md:block w-[80px] px-0 border-r border-e-border dark:border-e-[#555] h-full`}
         aria-hidden={slidebar ? "true" : "false"}
       >
-        <div className="relative flex flex-col justify-start align-center py-[20px] h-full">
+        <div className="relative flex flex-col justify-start align-center pt-[20px] h-full">
           {slidebar ? (
             <button
               className="md:hidden absolute right-[-60px] flex items-center justify-center text-white bg-primary text-[20px] p-3 rounded-md"
