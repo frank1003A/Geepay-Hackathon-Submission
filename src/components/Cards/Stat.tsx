@@ -25,7 +25,9 @@ const Stat = ({
         >
           {icon}
         </div>
-        <div className="h-32px flex-shrink-0">{chart}</div>
+        <div className="h-32px flex-shrink-0 hover:scale-125 transition">
+          {chart}
+        </div>
       </div>
       <span className="text-[18px] font-[500] text-[#898989] dark:text-white capitalize">
         {title}
