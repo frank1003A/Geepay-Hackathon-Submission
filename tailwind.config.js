@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/tailwind-datepicker-react/dist/**/*.js",
+  ],
   theme: {
     backgroundColor: (theme) => ({
       ...theme("colors"),
@@ -25,8 +29,4 @@ export default {
   },
   darkMode: "class",
   plugins: [],
-  safelist: [
-    "animate-[fade-in_1s_ease-in-out]",
-    "animate-[fade-in-down_1s_ease-in-out]",
-  ],
 };

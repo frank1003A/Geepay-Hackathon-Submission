@@ -1,30 +1,41 @@
-# React + TypeScript + Vite
+# GeePay Analytics Dashboard Hackathon Submission
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Introduction
 
-Currently, two official plugins are available:
+Welcome to my submission for the GeePay Analytics Dashboard Hackathon! This project showcases my skills in building a responsive and interactive analytics dashboard using React, Tailwind CSS, TypeScript, and Headless UI. By avoiding heavy frameworks and dependencies on UI libraries, I've demonstrated my ability to create a sleek and functional dashboard from scratch.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+1. **Dark and Light Mode**: The dashboard supports both dark and light modes, providing users with a customizable viewing experience.
+2. **Interactive Table**: The dashboard features an interactive table that allows users to view and analyze data seamlessly.
+3. **Live URL**: You can access the live dashboard at [GeePay Hackathon Submission](https://geepay-hackathon-submission.vercel.app/).
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Technologies Used
 
-- Configure the top-level `parserOptions` property like this:
+- React: Used for building the frontend components and managing state efficiently.
+- Tailwind CSS: Utilized for styling the dashboard with minimalistic yet visually appealing designs.
+- TypeScript: Implemented for type safety and enhanced development experience.
+- Headless UI: Leveraged for building accessible and customizable UI components without heavy framework dependencies.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Project Structure
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- `src/components`: Contains reusable React components for building the dashboard layout, charts, and tables.
+- `src/styles`: Houses Tailwind CSS utility classes and custom styles for styling the components.
+- `src/data`: Stores sample data for populating the analytics dashboard.
+
+## Getting Started
+
+1. Clone the repository: `git clone https://github.com/your-username/geepay-analytics-dashboard.git`
+2. Install dependencies: `npm install`
+3. Run the development server: `npm start`
+4. Access the dashboard in your browser at `http://localhost:3000`
+
+## Contributing
+
+If you'd like to contribute to this project, feel free to fork the repository and submit pull requests with your enhancements or bug fixes.
+
+## Feedback
+
+Your feedback is valuable! If you have any suggestions, feature requests, or issues to report, please create a new issue on the GitHub repository.
+
+Thank you for checking out my GeePay Analytics Dashboard Hackathon submission! I hope you find it informative and enjoyable to explore.
