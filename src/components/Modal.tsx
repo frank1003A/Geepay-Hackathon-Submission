@@ -1,7 +1,8 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
-import { BiDownload, BiPrinter } from "react-icons/bi";
+import { BiDownload, BiPrinter, BiX } from "react-icons/bi";
 import { Order } from "../types";
+import Button from "./Buttons/Button";
 import IconButton from "./Buttons/IconButton";
 import { Logo } from "./Icons";
 
@@ -89,11 +90,8 @@ export default function CustomModal({
                     <Logo />
                     Invoice
                     <div className="flex items-center justify-center gap-[5px] ml-auto">
-                      <IconButton>
-                        <BiPrinter />
-                      </IconButton>
-                      <IconButton>
-                        <BiDownload />
+                      <IconButton onClick={closeModal}>
+                        <BiX />
                       </IconButton>
                     </div>
                   </Dialog.Title>
@@ -134,6 +132,16 @@ export default function CustomModal({
                         </span>
                       </div>
                     </div>
+                  </div>
+                  <div className="flex items-center justify-between px-4 py-0 w-full">
+                    <Button>
+                      Download
+                      <BiDownload />
+                    </Button>
+                    <Button>
+                      Print
+                      <BiPrinter />
+                    </Button>
                   </div>
                 </Dialog.Panel>
               </Transition.Child>

@@ -10,11 +10,11 @@ const User = () => {
       dark:border-[#555] gap-[12px]"
       >
         <img src={userImg} alt="user" />
-        <div className="flex flex-col">
-          <span id="user" className="text-primaryfont text-[16px] end">
+        <div className="flex flex-col text-right">
+          <span id="user" className="text-primaryfont text-[16px]">
             Justin Bergson
           </span>
-          <span id="user-email" className="text-secondaryfont text-[14px] end">
+          <span id="user-email" className="text-secondaryfont text-[14px]">
             Justin@gmail.com
           </span>
         </div>
