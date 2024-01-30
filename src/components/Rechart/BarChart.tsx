@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Bar,
   CartesianGrid,
@@ -47,6 +48,7 @@ const CustomTooltip = ({
 };
 
 const BarChart = ({ data }: { data: { name: string; pv: number }[] }) => {
+  const [active, setActive] = useState<number | null>(null);
   return (
     <ResponsiveContainer width="100%" height="100%">
       <RechartBarChart
@@ -62,6 +64,13 @@ const BarChart = ({ data }: { data: { name: string; pv: number }[] }) => {
         barSize={20}
         style={{
           zIndex: "0 !important",
+        }}
+        onMouseMove={(state) => {
+          if (state.activeTooltipIndex) {
+            setActive(state.activeTooltipIndex);
+          } else {
+            setActive(null);
+          }
         }}
       >
         <defs>
@@ -101,8 +110,10 @@ const BarChart = ({ data }: { data: { name: string; pv: number }[] }) => {
           {data.map((entry, index) => (
             <Cell
               key={`cell-${index}`}
+              className="transition"
               fill={
-                entry.pv === Math.max(...data.map((d) => d.pv))
+                entry.pv === Math.max(...data.map((d) => d.pv)) ||
+                active === index
                   ? "url(#colorUv)"
                   : "rgba(52, 202, 165, 0.10)"
               }
