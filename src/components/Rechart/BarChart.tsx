@@ -20,16 +20,16 @@ const CustomTooltip = ({
   active,
   payload,
 }: TooltipProps<ValueType, NameType>) => {
-  if (active) {
+  if (active && payload) {
     return (
       <div
         className="relative mx-2"
         style={{
-          transform: "translate(-60px,-110px)",
+          transform: `translate(-60px,-110px)`,
         }}
       >
         <div className="bg-black text-white text-xs rounded py-[5px] px-4 right-0 bottom-full rounded-md">
-          {`$ ${payload ? Number(payload?.[0].value).toFixed(0) : 0}.000`}
+          {`$ ${payload ? Number(payload[0].value).toFixed(0) : 0}.000`}
           <svg
             className="absolute text-black h-2 w-full left-0 top-full"
             x="0px"
