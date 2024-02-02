@@ -30,10 +30,6 @@ Welcome to my submission for the GeePay Analytics Dashboard Hackathon! This proj
 3. Run the development server: `npm start`
 4. Access the dashboard in your browser at `http://localhost:3000`
 
-## Contributing
-
-If you'd like to contribute to this project, feel free to fork the repository and submit pull requests with your enhancements or bug fixes.
-
 ## Feedback
 
 Your feedback is valuable! If you have any suggestions, feature requests, or issues to report, please create a new issue on the GitHub repository.
